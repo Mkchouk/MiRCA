@@ -1,3 +1,6 @@
+//Mkchouk Copyright
+
+//Trim_Mode
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -25,7 +28,7 @@ bool get_ligne(FILE* f, ligne* pr)
    pr->sseq = malloc(60000 * sizeof(char*));
  /*   int n = fscanf(f, "%s,contig%d,%d,%d,%[^\n]\n", &pr->seq_id,
 			&pr->ch_id, &pr->pos_id, &pr->end_id, pr->data);*/
-    char *chaine = NULL; // Chaîne vide de taille TAILLE_MAX
+    char *chaine = NULL; // ChaÃ®ne vide de taille TAILLE_MAX
 	chaine = malloc(sizeof(char*) * 200005);
 	int TAILLE_MAX=200005;int n=0;
 	      fgets(chaine,TAILLE_MAX,f);
@@ -243,11 +246,11 @@ Tligne=malloc(25000*sizeof(ligne));
 		char *precedent;
 		precedent = NULL;
    ligne l;
-    fichier = fopen("resultatblastne10ACINETO","r");
+    fichier = fopen("AlignResult","r");  //Alignment Result From BLAST+
 	FILE* fichier1 = NULL;
-	fichier1 = fopen("Wacineto_nanopore_2D_6runs.fa","r");
-	FILE* fichier2 = NULL;
-	fichier2 = fopen("ReadsCorrectedblastnTRIMmodeAcineto.fasta","w");
+	fichier1 = fopen("Longreads.fasta","r"); //Long Reads file
+ 	FILE* fichier2 = NULL;
+	fichier2 = fopen("ReadsCorrected.fasta","w"); //Corrected Long reads
 	int j = 0;
 
 	if (fichier == NULL)
