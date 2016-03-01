@@ -25,7 +25,7 @@ bool get_ligne(FILE* f, ligne* pr)
    pr->sseq = malloc(60000 * sizeof(char*));
  /*   int n = fscanf(f, "%s,contig%d,%d,%d,%[^\n]\n", &pr->seq_id,
 			&pr->ch_id, &pr->pos_id, &pr->end_id, pr->data);*/
-    char *chaine = NULL; // Chaîne vide de taille TAILLE_MAX
+    char *chaine = NULL; // ChaÃ®ne vide de taille TAILLE_MAX
 	chaine = malloc(sizeof(char*) * 200005);
 	int TAILLE_MAX=200005;int n=0;
 	      fgets(chaine,TAILLE_MAX,f);
@@ -233,11 +233,11 @@ Tligne=malloc(25000*sizeof(ligne));
 		char *precedent;
 		precedent = NULL;
    ligne l;
-    fichier = fopen("resultatblastne102D","r");
+    fichier = fopen("alignResults","r"); // alignment results from BLAST+
 	FILE* fichier1 = NULL;
-	fichier1 = fopen("W303.fa","r");
+	fichier1 = fopen("LongReads.fasta","r"); //long reads File
 	FILE* fichier2 = NULL;
-	fichier2 = fopen("ReadsCorrectedblastn10TTTTTTTTTTTTTTTT.fasta","w");
+	fichier2 = fopen("ReadsCorrected.fasta","w"); // Corrected Long Reads
 	int j = 0;
 
 	if (fichier == NULL)
