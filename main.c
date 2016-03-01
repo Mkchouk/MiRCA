@@ -1,3 +1,6 @@
+// Mkchouk Copyright
+
+// Default Mode
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
