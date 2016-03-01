@@ -31,6 +31,4 @@ There are Two Mode in MiRCA:
 - First Mode `Default Mode` (main.c): update the input and output files by changing the path of the alignment results file and the long file reads path.
 - First Mode `Trim Mode` (main_trim.c): update the input and output files by changing the path of the alignment result file and the long file reads path (further explanation in main_trim.c).
 
-
-
-
+The ssembly consists of long corrected reads using Celera assembler but this step is optional for those who want the assembly.
