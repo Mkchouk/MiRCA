@@ -17,8 +17,9 @@ MiRCA can be downloaded at :
 - https://github.com/Mkchouk/MiRCA
 
 #####Install MiRCA:
-To install the tool, the user must download the file MiRCA-master.zip and extract it.
-
-`tar -xzf MiRCA-master.zip`
+To install the tool, the user must download the file **MiRCA-master.zip** and extract it.
+```
+tar -xzf MiRCA-master.zip
+```
 
 
