@@ -29,6 +29,11 @@ tar -xzf MiRCA-master.zip
 
 The package contains one main script called ***MiRCA.sh*** that coordinates the execution of the whole process.
 
+```
+chmod +x MiRCA.sh
+./MiRCA.sh
+```
+
 You must modify the MiRCA.sh file by adding the paths of short reads (.FASTA or .FQ)  and long reads reads (.FASTA). In the MiRCA.sh, you must change the directories of files results of spades and Blast+ in the current directory.
 
 There are Two Mode in MiRCA:
