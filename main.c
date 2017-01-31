@@ -88,11 +88,17 @@ char *sequence_replace(char *s, int start, int lenght, char *ct)
    {
       int size = strlen (s);
      // new_s = malloc (sizeof (*new_s) * (size - lenght + strlen (ct) + 1));
-	 if (new_s != NULL)
-      {
+	if (new_s != NULL)
+      {		 
          memcpy (new_s, s, start);
-         memcpy (&new_s[start], ct, strlen (ct));
-         memcpy (&new_s[start + strlen (ct)], &s[start + lenght], size - lenght - start + 1);
+		 res=start+lenght;
+		if (res>=size) {
+			 memcpy (&new_s[start], ct, strlen (ct));
+			 }
+		else{
+			memcpy (&new_s[start], ct, strlen (ct));
+			memcpy (&new_s[start + strlen (ct)], &s[start + lenght], size - lenght - start + 1);
+			}
       }
    }
    else
@@ -178,12 +184,12 @@ char *delim=NULL;
         delim = malloc(sizeof(char) * 250);
   while(fgets(chaine1,TAILLE_MAX, f1)!= NULL){
         int p=0;
-    if(strlen(chaine1)<70 && chaine1[0]=='>')  {
+    if(strlen(chaine1)<150 && chaine1[0]=='>')  {
    		delim=chaine1;
     delim[strlen(chaine1) - 1] = '\0';
       		p=1;}
 
-    if(strlen(chaine1)>70 && strlen(chaine1)<300 && chaine1[0]=='>'){delim=strtok(chaine1," ");p=1;}
+    //if(strlen(chaine1)>17 && strlen(chaine1)<300 && chaine1[0]=='>'){delim=strtok(chaine1," ");p=1;}
        if(p==1){
         for(c=0;c<strlen(delim);c++){
 		delim[c]=delim[c+1];
