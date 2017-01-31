@@ -25,7 +25,7 @@ bool get_ligne(FILE* f, ligne* pr)
    pr->sseq = malloc(60000 * sizeof(char*));
  /*   int n = fscanf(f, "%s,contig%d,%d,%d,%[^\n]\n", &pr->seq_id,
 			&pr->ch_id, &pr->pos_id, &pr->end_id, pr->data);*/
-    char *chaine = NULL; // Chaîne vide de taille TAILLE_MAX
+    char *chaine = NULL; // ChaÃ®ne vide de taille TAILLE_MAX
 	chaine = malloc(sizeof(char*) * 200005);
 	int TAILLE_MAX=200005;int n=0;
 	      fgets(chaine,TAILLE_MAX,f);
@@ -52,7 +52,7 @@ else{
 ligne* table_trier(ligne table[], int n){
     int i,permutation = 1;ligne temp;
 
-if(n>1){
+if(n>0){
             while (permutation == 1){
             permutation = 0;
             for (i=0; i<n-1; i++){
@@ -85,11 +85,17 @@ char *sequence_replace(char *s, int start, int lenght, char *ct)
    {
       int size = strlen (s);
      // new_s = malloc (sizeof (*new_s) * (size - lenght + strlen (ct) + 1));
-	 if (new_s != NULL)
-      {
+	if (new_s != NULL)
+      {		 
          memcpy (new_s, s, start);
-         memcpy (&new_s[start], ct, strlen (ct));
-         memcpy (&new_s[start + strlen (ct)], &s[start + lenght], size - lenght - start + 1);
+		 res=start+lenght;
+		if (res>=size) {
+			 memcpy (&new_s[start], ct, strlen (ct));
+			 }
+		else{
+			memcpy (&new_s[start], ct, strlen (ct));
+			memcpy (&new_s[start + strlen (ct)], &s[start + lenght], size - lenght - start + 1);
+			}
       }
    }
    else
@@ -175,11 +181,11 @@ char *delim=NULL;
         delim = malloc(sizeof(char) * 250);
   while(fgets(chaine1,TAILLE_MAX, f1)!= NULL){
         int p=0;
-    if(strlen(chaine1)<100 && chaine1[0]=='>')  {
+    if(strlen(chaine1)<150 && chaine1[0]=='>')  {
    		delim=chaine1;
     delim[strlen(chaine1) - 1] = '\0';
       		p=1;}
-printf("OK");
+
     /*if(strlen(chaine1)>70 && strlen(chaine1)<300 && chaine1[0]=='>'){delim=strtok(chaine1," ");p=1;}*/
        if(p==1){
         for(c=0;c<strlen(delim);c++)
