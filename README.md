@@ -56,8 +56,4 @@ Copyright (c) 2016 MKchouk
 
 31-01-2017   MiRCA v1.2 Problem resolved. new Spades 3.10 is availabe...
 ####For Citations
-M. Kchouk and M. Elloumi, "Hybrid error correction approach and de novo assembly for minion sequencing long reads," 2016 IEEE International Conference on Bioinformatics and Biomedicine (BIBM), Shenzhen, China, 2016, pp. 122-125.
-doi: 10.1109/BIBM.2016.7822504
 
-M. Kchouk and M. Elloumi, "Efficient Hybrid De Novo Error Correction and Assembly for Long Reads," 2016 27th International Workshop on Database and Expert Systems Applications (DEXA), Porto, Portugal, 2016, pp. 88-92.
-doi: 10.1109/DEXA.2016.032
