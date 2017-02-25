@@ -80,7 +80,7 @@ char *sequence_replace(char *s, int start, int lenght, char *ct)
 {
    char *new_s = NULL;
    new_s=malloc(250000*sizeof(char));
-
+int res=0;
    if (s != NULL && start >= 0)
    {
       int size = strlen (s);
