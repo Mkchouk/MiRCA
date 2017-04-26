@@ -249,12 +249,12 @@ Tligne=malloc(25000*sizeof(ligne));
 		char *precedent;
 		precedent = NULL;
    ligne l;
-    fichier = fopen("/home/mkchouk/ForKchouk/Alignresults","r");
-//	fichier = fopen("resultatblastne102D","r");
+    fichier = fopen("Alignresults","r");
+//	fichier = fopen("resultatblastne102D","r"); //(File to alignment result of Blast)
 	FILE* fichier1 = NULL;
-	fichier1 = fopen("/home/mkchouk/ForKchouk/655H4pacbio.fasta","r");
+	fichier1 = fopen("655H4pacbio.fasta","r"); //(File of Raw long Reads)
 	FILE* fichier2 = NULL;
-	fichier2 = fopen("ReadsCorrectedForRennes_trimmode.fasta","w");
+	fichier2 = fopen("ReadsCorrected_trimmode.fasta","w");// (file of Corrected reads)
 	int j = 0;
 
 	if (fichier == NULL)
