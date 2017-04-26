@@ -242,9 +242,9 @@ Tligne=malloc(25000*sizeof(ligne));
 		char *precedent;
 		precedent = NULL;
    ligne l;
-    fichier = fopen("alignResults","r"); // alignment results from BLAST+
+    fichier = fopen("alignResults","r"); // alignment results from BLAST+ (the file of Blast Result)
 	FILE* fichier1 = NULL;
-	fichier1 = fopen("LongReads.fasta","r"); //long reads File
+	fichier1 = fopen("LongReads.fasta","r"); //The long reads File(chage this with your long read file)
 	FILE* fichier2 = NULL;
 	fichier2 = fopen("ReadsCorrected.fasta","w"); // Corrected Long Reads
 	int j = 0;
